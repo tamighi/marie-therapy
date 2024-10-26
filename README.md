@@ -5,7 +5,7 @@ React / typescript website.
 ## Librairies
 
 Routing: tanstack 
-UI: shadcn, tailwind
+UI: tailwind
 
 ## Design
 
