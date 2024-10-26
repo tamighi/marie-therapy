@@ -7,6 +7,8 @@ import {
     RouterProvider,
 } from "@tanstack/react-router";
 
+import "./index.css";
+
 import { About, Contact, Hero, Modalities } from "./routes/index.ts";
 import { Root } from "./routes/Root.tsx";
 
