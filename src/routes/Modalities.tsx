@@ -1,7 +1,3 @@
 export const Modalities = () => {
-  return (
-    <div>
-      Modalities page
-    </div>
-  )
-}
+    return <div>Modalities page</div>;
+};
