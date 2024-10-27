@@ -7,7 +7,8 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
 export const BaseButton = ({ className = "", children, ...props }: Props) => {
     return (
         <button
-            className={`rounded-lg px-4 py-2 hover:bg-hover transition-colors ${className}`}
+            className={`rounded-lg px-4 py-2 transition-colors hover:bg-hover
+                ${className}`}
             {...props}
         >
             {children}

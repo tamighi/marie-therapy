@@ -19,23 +19,25 @@ export const MobileNavIcon = (props: MobileNavIconProps) => {
     };
 
     return (
-        <div className="md:hidden flex items-center">
+        <div className="flex items-center md:hidden">
             <BaseButton onClick={() => setIsOpen(true)}>
                 <img src={menu} />
             </BaseButton>
             <div
-                className={`fixed h-screen w-screen bg-black transition-opacity duration-300 top-0 left-0 ${
+                className={`fixed left-0 top-0 h-screen w-screen bg-black
+                    transition-opacity duration-300 ${
                     isOpen
-                        ? "bg-opacity-20 pointer-events-auto"
-                        : "bg-opacity-0 pointer-events-none"
-                }`}
+                            ? "pointer-events-auto bg-opacity-20"
+                            : "pointer-events-none bg-opacity-0"
+                    }`}
                 onClick={() => setIsOpen(false)}
             >
                 <div
                     onClick={(e) => e.stopPropagation()}
-                    className={`md:hidden flex flex-col gap-4 h-screen bg-primary py-2 w-fit transition-transform duration-300 ease-out ${
-                        isOpen ? "translate-x-0" : "-translate-x-full"
-                    }`}
+                    className={`flex h-screen w-fit flex-col gap-4 bg-primary
+                        py-2 transition-transform duration-300 ease-out
+                        md:hidden ${
+                        isOpen ? "translate-x-0" : "-translate-x-full" }`}
                 >
                     {navItems.map((item) => (
                         <BaseButton

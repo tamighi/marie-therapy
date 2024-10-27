@@ -18,9 +18,9 @@ export const AppBar = () => {
     const navigate = useNavigate();
 
     return (
-        <nav className="bg-primary drop-shadow-main static w-screen">
-            <div className="max-w-7xl mx-auto px-4">
-                <div className="flex justify-between h-16">
+        <nav className="static w-screen bg-primary drop-shadow-main">
+            <div className="mx-auto max-w-7xl px-4">
+                <div className="flex h-16 justify-between">
                     <div className="flex items-center">
                         <BaseButton
                             onClick={() => navigate({ to: "/" })}
@@ -30,7 +30,7 @@ export const AppBar = () => {
                         </BaseButton>
                     </div>
 
-                    <div className="hidden gap-4 md:flex items-center">
+                    <div className="hidden items-center gap-4 md:flex">
                         {navItems.map((item) => (
                             <BaseButton
                                 key={item.to}
