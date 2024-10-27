@@ -2,17 +2,7 @@ import { useNavigate } from "@tanstack/react-router";
 
 import { MobileNavIcon } from "./MobileNavIcon";
 import { BaseButton } from "../Buttons";
-
-export type NavItem = {
-    label: string;
-    to: string;
-};
-
-const navItems: NavItem[] = [
-    { label: "A propos", to: "/about" },
-    { label: "Prix et modalités", to: "/modalities" },
-    { label: "Contact", to: "/contact" },
-];
+import { links } from "../../constants";
 
 export const AppBar = () => {
     const navigate = useNavigate();
@@ -31,7 +21,7 @@ export const AppBar = () => {
                     </div>
 
                     <div className="hidden items-center gap-4 md:flex">
-                        {navItems.map((item) => (
+                        {links.map((item) => (
                             <BaseButton
                                 key={item.to}
                                 onClick={() => navigate({ to: item.to })}
@@ -42,7 +32,7 @@ export const AppBar = () => {
                         ))}
                     </div>
 
-                    <MobileNavIcon navItems={navItems} />
+                    <MobileNavIcon />
                 </div>
             </div>
         </nav>

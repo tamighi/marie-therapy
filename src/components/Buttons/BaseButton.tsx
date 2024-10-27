@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
 export type BaseButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     children?: ReactNode;
@@ -11,8 +12,10 @@ export const BaseButton = ({
 }: BaseButtonProps) => {
     return (
         <button
-            className={`rounded-lg px-4 py-2 transition-colors hover:bg-hover
-                ${className}`}
+            className={twMerge(
+                "rounded-lg px-4 py-2 transition-colors hover:bg-hover",
+                className,
+            )}
             {...props}
         >
             {children}

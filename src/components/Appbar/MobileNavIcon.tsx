@@ -1,15 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
-import { NavItem } from "./Appbar";
 import { menu } from "../../assets";
 import { BaseButton } from "../Buttons";
+import { links } from "../../constants";
 
-type MobileNavIconProps = {
-    navItems: NavItem[];
-};
-
-export const MobileNavIcon = (props: MobileNavIconProps) => {
-    const { navItems } = props;
+export const MobileNavIcon = () => {
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
 
@@ -39,7 +34,7 @@ export const MobileNavIcon = (props: MobileNavIconProps) => {
                         md:hidden ${
                         isOpen ? "translate-x-0" : "-translate-x-full" }`}
                 >
-                    {navItems.map((item) => (
+                    {links.map((item) => (
                         <BaseButton
                             key={item.to}
                             onClick={() => onNavClick(item.to)}
