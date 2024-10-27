@@ -19,7 +19,7 @@ export const About = () => {
                     <Card
                         key={i}
                         className={`flex flex-col
-                        md:${i % 2 !== 0 ? "flex-row-reverse" : "flex-row"}
+                        ${i % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"}
                         gap-16 md:items-start items-center`}
                     >
                         <div className="flex flex-col gap-8">
