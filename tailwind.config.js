@@ -13,7 +13,7 @@ export default {
       },
       spacing: {
         "8xl": "96rem"
-      }
+      },
     },
     fontFamily: {
       main: ["Poppins", "sans-serif"]
