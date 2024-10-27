@@ -1,11 +1,14 @@
 import { Outlet } from "@tanstack/react-router";
-import { AppBar } from "../components";
+import { AppBar, Footer } from "../components";
 
 export const Root = () => {
     return (
-        <>
+        <div className="min-h-screen flex flex-col bg-primary-bg">
             <AppBar />
-            <Outlet />
-        </>
+            <div className="flex-1 flex max-w-7xl mx-auto">
+                <Outlet />
+            </div>
+            <Footer />
+        </div>
     );
 };
