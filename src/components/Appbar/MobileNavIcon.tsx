@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
-
 import { NavItem } from "./Appbar";
 import { menu } from "../../assets";
 import { BaseButton } from "../Buttons";
@@ -24,27 +23,30 @@ export const MobileNavIcon = (props: MobileNavIconProps) => {
             <BaseButton onClick={() => setIsOpen(true)}>
                 <img src={menu} />
             </BaseButton>
-
-            {isOpen && (
+            <div
+                className={`fixed h-screen w-screen bg-black transition-opacity duration-300 top-0 left-0 ${
+                    isOpen
+                        ? "bg-opacity-20 pointer-events-auto"
+                        : "bg-opacity-0 pointer-events-none"
+                }`}
+                onClick={() => setIsOpen(false)}
+            >
                 <div
-                    className="fixed h-screen w-screen bg-black bg-opacity-20 top-0 left-0"
-                    onClick={() => setIsOpen(false)}
+                    onClick={(e) => e.stopPropagation()}
+                    className={`md:hidden flex flex-col gap-4 h-screen bg-primary py-2 w-fit transition-transform duration-300 ease-out ${
+                        isOpen ? "translate-x-0" : "-translate-x-full"
+                    }`}
                 >
-                    <div
-                        onClick={(e) => e.stopPropagation()}
-                        className="md:hidden flex flex-col gap-4 h-screen bg-primary py-2 w-fit"
-                    >
-                        {navItems.map((item) => (
-                            <BaseButton
-                                key={item.to}
-                                onClick={() => onNavClick(item.to)}
-                            >
-                                {item.label}
-                            </BaseButton>
-                        ))}
-                    </div>
+                    {navItems.map((item) => (
+                        <BaseButton
+                            key={item.to}
+                            onClick={() => onNavClick(item.to)}
+                        >
+                            {item.label}
+                        </BaseButton>
+                    ))}
                 </div>
-            )}
+            </div>
         </div>
     );
 };
