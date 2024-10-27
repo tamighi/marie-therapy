@@ -4,10 +4,11 @@ import { Button } from "../components";
 
 export const Hero = () => {
     const navigate = useNavigate();
+
     return (
         <div
             className="flex h-full items-center justify-center md:flex-row
-                flex-col"
+                flex-col md:pb-[160px]"
         >
             <div
                 className="flex flex-col gap-4 text-center md:text-left
