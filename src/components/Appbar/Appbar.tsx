@@ -1,5 +1,7 @@
-import { Link } from "@tanstack/react-router";
+import { useNavigate } from "@tanstack/react-router";
+
 import { MobileNavIcon } from "./MobileNavIcon";
+import { BaseButton } from "../Buttons";
 
 export type NavItem = {
     label: string;
@@ -13,25 +15,30 @@ const navItems: NavItem[] = [
 ];
 
 export const AppBar = () => {
+    const navigate = useNavigate();
+
     return (
         <nav className="bg-primary drop-shadow-main static w-screen">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between h-16">
                     <div className="flex items-center">
-                        <Link to="/" className="text-xl font-bold">
+                        <BaseButton
+                            onClick={() => navigate({ to: "/" })}
+                            className="text-xl font-bold"
+                        >
                             Marie Somville
-                        </Link>
+                        </BaseButton>
                     </div>
 
                     <div className="hidden gap-4 md:flex items-center">
                         {navItems.map((item) => (
-                            <Link
+                            <BaseButton
                                 key={item.to}
-                                to={item.to}
+                                onClick={() => navigate({ to: item.to })}
                                 className="rounded-md p-3 text-base font-medium"
                             >
                                 {item.label}
-                            </Link>
+                            </BaseButton>
                         ))}
                     </div>
 

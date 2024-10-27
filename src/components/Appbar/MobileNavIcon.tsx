@@ -3,6 +3,7 @@ import { useNavigate } from "@tanstack/react-router";
 
 import { NavItem } from "./Appbar";
 import { menu } from "../../assets";
+import { BaseButton } from "../Buttons";
 
 type MobileNavIconProps = {
     navItems: NavItem[];
@@ -20,9 +21,9 @@ export const MobileNavIcon = (props: MobileNavIconProps) => {
 
     return (
         <div className="md:hidden flex items-center">
-            <button onClick={() => setIsOpen(true)} className="p-2">
+            <BaseButton onClick={() => setIsOpen(true)}>
                 <img src={menu} />
-            </button>
+            </BaseButton>
 
             {isOpen && (
                 <div
@@ -34,13 +35,12 @@ export const MobileNavIcon = (props: MobileNavIconProps) => {
                         className="md:hidden flex flex-col gap-4 h-screen bg-primary py-2 w-fit"
                     >
                         {navItems.map((item) => (
-                            <button
+                            <BaseButton
                                 key={item.to}
                                 onClick={() => onNavClick(item.to)}
-                                className="px-3 py-2 rounded-md text-base font-medium"
                             >
                                 {item.label}
-                            </button>
+                            </BaseButton>
                         ))}
                     </div>
                 </div>
