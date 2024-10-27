@@ -1,5 +1,5 @@
 import { marie_portrait } from "../assets";
-import { Card } from "../components";
+import { Card, LazyImage } from "../components";
 import { AboutText, tools } from "../constants";
 import { BasePage } from "./BasePage";
 
@@ -13,7 +13,7 @@ export const About = () => {
                         dangerouslySetInnerHTML={{ __html: AboutText }}
                     ></span>
                 </Card>
-                <img src={marie_portrait}></img>
+                <LazyImage src={marie_portrait}></LazyImage>
             </div>
             <div className="flex flex-col items-center gap-8">
                 {tools.map((tool, i) => (
@@ -33,10 +33,10 @@ export const About = () => {
                                 }}
                             ></span>
                         </div>
-                        <img
+                        <LazyImage
                             src={tool.img}
                             className="max-w-[90%] md:max-w-[25%]"
-                        ></img>
+                        ></LazyImage>
                     </Card>
                 ))}
             </div>
