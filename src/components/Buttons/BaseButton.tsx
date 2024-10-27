@@ -1,15 +1,9 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
+import { ButtonHTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 
-export type BaseButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-    children?: ReactNode;
-};
+export type BaseButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const BaseButton = ({
-    className = "",
-    children,
-    ...props
-}: BaseButtonProps) => {
+export const BaseButton = ({ className = "", ...props }: BaseButtonProps) => {
     return (
         <button
             className={twMerge(
@@ -17,8 +11,6 @@ export const BaseButton = ({
                 className,
             )}
             {...props}
-        >
-            {children}
-        </button>
+        />
     );
 };

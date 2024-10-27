@@ -1,6 +1,7 @@
 {
   "tabWidth": 4,
   "endingPosition": "absolute-with-indent",
+  "proseWrap": "always",
   "plugins": [
     "prettier-plugin-tailwindcss",
     "prettier-plugin-classnames"

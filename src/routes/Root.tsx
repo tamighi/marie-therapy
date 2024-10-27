@@ -14,7 +14,8 @@ export const Root = () => {
             <AppBar />
             <div className="min-h-screen flex flex-col">
                 <div
-                    className="flex-1 flex mt-16 w-7xl mx-auto px-4 py-4 md:py-0"
+                    className="flex-1 flex mt-16 max-w-7xl mx-auto px-4 py-4
+                        md:py-0"
                 >
                     <AnimatePresence mode="wait">
                         <AnimatedOutlet key={nextMatch.id} />
