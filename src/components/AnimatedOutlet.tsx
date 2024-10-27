@@ -31,6 +31,7 @@ export const AnimatedOutlet = forwardRef<HTMLDivElement>((_, ref) => {
             onAnimationComplete={() => window.scrollTo({ top: 0 })}
             transition={{ duration: 0.3 }}
             ref={ref}
+            className="w-full"
         >
             <RouterContext.Provider value={renderedContext.current}>
                 <Outlet />

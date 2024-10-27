@@ -1,10 +1,11 @@
 import { marie_portrait } from "../assets";
 import { Card } from "../components";
 import { AboutText, tools } from "../constants";
+import { BasePage } from "./BasePage";
 
 export const About = () => {
     return (
-        <div className="flex h-full flex-col my-8 md:my-16 gap-16">
+        <BasePage className="flex h-full flex-col my-8 md:my-16 gap-16">
             <div className="flex md:flex-row flex-col-reverse items-center gap-8">
                 <Card className="flex flex-col gap-8">
                     <h2 className="font-bold">Qui suis-je ?</h2>
@@ -39,6 +40,6 @@ export const About = () => {
                     </Card>
                 ))}
             </div>
-        </div>
+        </BasePage>
     );
 };

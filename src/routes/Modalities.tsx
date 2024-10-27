@@ -1,3 +1,5 @@
+import { BasePage } from "./BasePage";
+
 export const Modalities = () => {
-    return <div>Modalities page</div>;
+    return <BasePage>Modalities page</BasePage>;
 };

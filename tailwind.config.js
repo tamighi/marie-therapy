@@ -11,6 +11,9 @@ export default {
         "secondary": "#C1AF93",
         "on-primary": "#000000",
       },
+      spacing: {
+        "8xl": "96rem"
+      }
     },
     fontFamily: {
       main: ["Poppins", "sans-serif"]
