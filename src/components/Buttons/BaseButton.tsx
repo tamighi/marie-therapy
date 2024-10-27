@@ -13,7 +13,7 @@ export const BaseButton = ({
     return (
         <button
             className={twMerge(
-                "rounded-lg px-4 py-2 transition-colors hover:bg-hover",
+                "rounded-lg px-4 py-2 transition-colors hover:bg-[#00000022]",
                 className,
             )}
             {...props}

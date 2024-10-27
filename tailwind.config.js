@@ -10,7 +10,6 @@ export default {
         "primary": "#FAEBD7",
         "secondary": "#C1AF93",
         "on-primary": "#000000",
-        "hover": "#00000022",
       },
     },
     fontFamily: {
