@@ -13,6 +13,9 @@ export default {
         "hover": "#00000022",
       },
     },
+    fontFamily: {
+      main: ["Poppins", "sans-serif"]
+    },
     dropShadow: {
       "main": [
         "rgba(0, 0, 0, 0.07) 0px 1px 1px",
