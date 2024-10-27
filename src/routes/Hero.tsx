@@ -5,7 +5,10 @@ import { Button } from "../components";
 export const Hero = () => {
     const navigate = useNavigate();
     return (
-        <div className="flex items-center justify-center md:flex-row flex-col">
+        <div
+            className="flex h-full items-center justify-center md:flex-row
+                flex-col"
+        >
             <div
                 className="flex flex-col gap-4 text-center md:text-left
                     items-center md:items-start"
