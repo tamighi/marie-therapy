@@ -20,14 +20,16 @@ export const MobileNavIcon = () => {
                 <img src={menu} />
             </BaseButton>
             <Drawer open={isOpen} onClose={() => setIsOpen(false)}>
-                {links.map((item) => (
-                    <BaseButton
-                        key={item.to}
-                        onClick={() => onNavClick(item.to)}
-                    >
-                        {item.label}
-                    </BaseButton>
-                ))}
+                <div className="flex flex-col gap-4">
+                    {links.map((item) => (
+                        <BaseButton
+                            key={item.to}
+                            onClick={() => onNavClick(item.to)}
+                        >
+                            {item.label}
+                        </BaseButton>
+                    ))}
+                </div>
             </Drawer>
         </div>
     );

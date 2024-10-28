@@ -18,7 +18,7 @@ export default {
     fontFamily: {
       main: ["Poppins", "sans-serif"]
     },
-    dropShadow: {
+    boxShadow: {
       "main": [
         "rgba(0, 0, 0, 0.07) 0px 1px 1px",
         "rgba(0, 0, 0, 0.07) 0px 2px 2px",
