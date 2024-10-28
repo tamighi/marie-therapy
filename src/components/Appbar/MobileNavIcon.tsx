@@ -25,6 +25,7 @@ export const MobileNavIcon = () => {
                     <hr className="border-on-primary w-full" />
                     {links.map((item) => (
                         <BaseButton
+                            className="w-full"
                             key={item.to}
                             onClick={() => onNavClick(item.to)}
                         >
