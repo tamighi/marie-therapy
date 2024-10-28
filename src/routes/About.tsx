@@ -13,7 +13,10 @@ export const About = () => {
                         dangerouslySetInnerHTML={{ __html: AboutText }}
                     ></span>
                 </Card>
-                <LazyImage src={marie_portrait}></LazyImage>
+                <LazyImage
+                    className="aspect-square"
+                    src={marie_portrait}
+                ></LazyImage>
             </div>
             <div className="flex flex-col items-center gap-8">
                 {tools.map((tool, i) => (
