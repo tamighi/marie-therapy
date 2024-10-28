@@ -3,6 +3,7 @@ import { useNavigate } from "@tanstack/react-router";
 import { menu } from "../../assets";
 import { BaseButton } from "../Buttons";
 import { links } from "../../constants";
+import { Drawer } from "../Drawer";
 
 export const MobileNavIcon = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,32 +19,16 @@ export const MobileNavIcon = () => {
             <BaseButton onClick={() => setIsOpen(true)}>
                 <img src={menu} />
             </BaseButton>
-            <div
-                className={`fixed left-0 top-0 h-screen w-screen bg-black
-                    transition-opacity duration-300 ${
-                    isOpen
-                            ? "pointer-events-auto bg-opacity-20"
-                            : "pointer-events-none bg-opacity-0"
-                    }`}
-                onClick={() => setIsOpen(false)}
-            >
-                <div
-                    onClick={(e) => e.stopPropagation()}
-                    className={`flex h-screen w-fit flex-col gap-4 bg-primary
-                        py-2 transition-transform duration-300 ease-out
-                        md:hidden ${
-                        isOpen ? "translate-x-0" : "-translate-x-full" }`}
-                >
-                    {links.map((item) => (
-                        <BaseButton
-                            key={item.to}
-                            onClick={() => onNavClick(item.to)}
-                        >
-                            {item.label}
-                        </BaseButton>
-                    ))}
-                </div>
-            </div>
+            <Drawer open={isOpen} onClose={() => setIsOpen(false)}>
+                {links.map((item) => (
+                    <BaseButton
+                        key={item.to}
+                        onClick={() => onNavClick(item.to)}
+                    >
+                        {item.label}
+                    </BaseButton>
+                ))}
+            </Drawer>
         </div>
     );
 };
