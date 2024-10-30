@@ -1,4 +1,4 @@
-import { flower_image } from "../assets";
+import { art_image, family_image, mindfulness_image } from "../assets";
 
 export type Tool = {
     title: string;
@@ -21,7 +21,7 @@ efficaces et durables pour une meilleure harmonie collective.
 Elle est particulièrement utile pour traiter des problèmes relationnels,
 de communication ou des situations de crise au sein d'un groupe.
   `,
-        img: flower_image,
+        img: family_image,
     },
     {
         title: "Thérapie Artistique",
@@ -37,7 +37,7 @@ sans nécessiter de compétences artistiques préalables.
 Idéale pour travailler sur l'estime de soi, la gestion du stress et la résolution
 des traumatismes.
   `,
-        img: flower_image,
+        img: art_image,
     },
     {
         title: "Mindfulness",
@@ -53,6 +53,6 @@ de la douleur chronique.
 Elle favorise un mieux-être global et améliore la qualité de vie en renforçant
 l'acceptation de soi et la régulation émotionnelle.
   `,
-        img: flower_image,
+        img: mindfulness_image,
     },
 ];
