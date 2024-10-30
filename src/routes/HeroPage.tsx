@@ -3,7 +3,7 @@ import { hero_image } from "../assets";
 import { Button, LazyImage } from "../components";
 import { BasePage } from "./BasePage";
 
-export const Hero = () => {
+export const HeroPage = () => {
     const navigate = useNavigate();
 
     return (

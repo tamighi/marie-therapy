@@ -3,11 +3,9 @@ import { Card, Fieldset, LazyImage } from "../components";
 import { AboutText, tools } from "../constants";
 import { BasePage } from "./BasePage";
 
-export const About = () => {
+export const AboutPage = () => {
     return (
-        <BasePage
-            className="flex h-full flex-col my-8 md:my-16 gap-16 items-center"
-        >
+        <BasePage className="flex h-full flex-col gap-16 items-center">
             <div className="flex md:flex-row flex-col-reverse items-center gap-8">
                 <Card className="flex flex-col gap-8">
                     <h2 className="font-bold">Qui suis-je ?</h2>

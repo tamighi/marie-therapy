@@ -9,29 +9,29 @@ import {
 
 import "./index.css";
 
-import { About, Contact, Hero, Modalities } from "./routes/index.ts";
+import { AboutPage, ContactPage, HeroPage, ModalitiesPage } from "./routes";
 import { Root } from "./routes/Root.tsx";
 
 const routeRoute = createRootRoute({ component: Root });
 
 const heroRoute = createRoute({
     path: "/",
-    component: Hero,
+    component: HeroPage,
     getParentRoute: () => routeRoute,
 });
 const aboutRoute = createRoute({
     path: "/about",
-    component: About,
+    component: AboutPage,
     getParentRoute: () => routeRoute,
 });
 const contactRoute = createRoute({
     path: "/contact",
-    component: Contact,
+    component: ContactPage,
     getParentRoute: () => routeRoute,
 });
 const modalitiesRoute = createRoute({
     path: "/modalities",
-    component: Modalities,
+    component: ModalitiesPage,
     getParentRoute: () => routeRoute,
 });
 
