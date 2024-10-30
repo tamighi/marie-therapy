@@ -1,11 +1,13 @@
 import { marie_portrait } from "../assets";
-import { Card, LazyImage } from "../components";
+import { Card, Fieldset, LazyImage } from "../components";
 import { AboutText, tools } from "../constants";
 import { BasePage } from "./BasePage";
 
 export const About = () => {
     return (
-        <BasePage className="flex h-full flex-col my-8 md:my-16 gap-16">
+        <BasePage
+            className="flex h-full flex-col my-8 md:my-16 gap-16 items-center"
+        >
             <div className="flex md:flex-row flex-col-reverse items-center gap-8">
                 <Card className="flex flex-col gap-8">
                     <h2 className="font-bold">Qui suis-je ?</h2>
@@ -18,6 +20,7 @@ export const About = () => {
                     src={marie_portrait}
                 ></LazyImage>
             </div>
+            <Fieldset label="Mes outils" className="md:mt-12" />
             <div className="flex flex-col items-center gap-8">
                 {tools.map((tool, i) => (
                     <Card

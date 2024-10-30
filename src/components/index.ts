@@ -7,3 +7,4 @@ export * from "./Loader";
 export * from "./LazyImage";
 export * from "./Drawer";
 export * from "./Backdrop";
+export * from "./Fieldset";
