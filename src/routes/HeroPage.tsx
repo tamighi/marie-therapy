@@ -19,7 +19,7 @@ export const HeroPage = () => {
                 <h2>Psychologue clinicienne</h2>
                 <span className="italic">
                     Mon chat c'est le plus beau, celui qui dira le contraire, je
-                    lui ferai sa fete ... - iconnue
+                    lui ferai sa fête ... - iconnue
                 </span>
                 <Button onClick={() => navigate({ to: "/about" })}>
                     En savoir plus

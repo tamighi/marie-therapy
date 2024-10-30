@@ -1,6 +1,7 @@
 import { Fieldset } from "../../components";
-import { modalities } from "../../constants";
+import { informations, modalities } from "../../constants";
 import { BasePage } from "../BasePage";
+import { InformationCard } from "./InformationCard";
 import { ModalityCard } from "./ModalityCard";
 
 export const ModalitiesPage = () => {
@@ -14,7 +15,12 @@ export const ModalitiesPage = () => {
                     </div>
                 ))}
             </div>
-            <Fieldset label="FAQ" />
+            <Fieldset label="Informations utiles" />
+            <div className="grid md:grid-cols-2 grid-cols-1 w-full gap-8">
+                {informations.map((information) => (
+                    <InformationCard key={information.title} {...information} />
+                ))}
+            </div>
         </BasePage>
     );
 };

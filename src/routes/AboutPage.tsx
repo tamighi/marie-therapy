@@ -9,12 +9,13 @@ export const AboutPage = () => {
             <div className="flex md:flex-row flex-col-reverse items-center gap-8">
                 <Card className="flex flex-col gap-8">
                     <h2 className="font-bold">Qui suis-je ?</h2>
-                    <span
+                    <p
+                        className="text-justify"
                         dangerouslySetInnerHTML={{ __html: AboutText }}
-                    ></span>
+                    />
                 </Card>
                 <LazyImage
-                    className="aspect-square"
+                    className="min-w-96"
                     src={marie_portrait}
                 ></LazyImage>
             </div>
@@ -31,11 +32,12 @@ export const AboutPage = () => {
                             <h2 className={"font-bold text-center"}>
                                 {tool.title}
                             </h2>
-                            <span
+                            <p
+                                className="text-justify"
                                 dangerouslySetInnerHTML={{
                                     __html: tool.description,
                                 }}
-                            ></span>
+                            />
                         </div>
                         <LazyImage
                             src={tool.img}
