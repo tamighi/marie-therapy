@@ -10,9 +10,7 @@ export const Footer = () => {
             <div className="max-w-7xl mx-auto gap-8 flex flex-col p-4">
                 <div className="flex flex-col md:flex-row justify-around gap-8">
                     <div className="flex flex-col items-start">
-                        <span className="font-semibold mb-4 mx-2">
-                            Liens du site
-                        </span>
+                        <h3 className="font-bold mb-4 mx-2">Liens du site</h3>
                         {links.map((link) => (
                             <BaseButton
                                 key={link.label}
@@ -24,9 +22,9 @@ export const Footer = () => {
                         ))}
                     </div>
                     <div className="flex flex-col">
-                        <span className="font-semibold mb-4 px-2">
+                        <h3 className="font-bold mb-4 px-2">
                             Informations de contact
-                        </span>
+                        </h3>
                         <div className="flex flex-col gap-2">
                             {contacts.map((contact, i) => (
                                 <ContactItem
