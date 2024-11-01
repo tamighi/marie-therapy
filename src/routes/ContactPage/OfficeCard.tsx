@@ -14,7 +14,10 @@ export const OfficeCard = ({
 }: Props) => {
     const flexDirection = imagePosition === "right" ? "row" : "row-reverse";
     return (
-        <Card className="flex gap-8" style={{ flexDirection }}>
+        <Card
+            className={`flex md:flex-${flexDirection} flex-col md:items-start
+                items-center gap-8`}
+        >
             <div className="flex flex-col gap-8">
                 <h3 className="font-bold">{title}</h3>
                 <div className="flex flex-col gap-4">
