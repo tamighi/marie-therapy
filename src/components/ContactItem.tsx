@@ -21,7 +21,7 @@ export const ContactItem = ({
                     <a
                         href={href}
                         target="_blank"
-                        className="flex gap-2 shadow-icon bg-primary p-2
+                        className="flex gap-2 shadow-icon bg-surface p-2
                             rounded-xl"
                     >
                         <img src={icon} />

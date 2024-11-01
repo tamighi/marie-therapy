@@ -9,9 +9,9 @@ const baseStyleClass =
     "rounded-lg px-4 py-2 transition-colors hover:bg-[#00000022]";
 
 const styleClasses: { [K in Props["variant"] as string]: string } = {
-    outlined: `${baseStyleClass} border-secondary text-secondary border-2`,
-    contained: `${baseStyleClass} bg-secondary text-secondary-text hover:bg-opacity-70 hover:bg-secondary`,
-    text: `${baseStyleClass} text-secondary`,
+    outlined: `${baseStyleClass} border-primary text-primary border-2`,
+    contained: `${baseStyleClass} bg-primary text-secondary-text hover:bg-opacity-70 hover:bg-primary`,
+    text: `${baseStyleClass} text-primary`,
 };
 
 export const Button = ({

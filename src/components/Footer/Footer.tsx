@@ -6,7 +6,7 @@ import { ContactItem } from "../ContactItem";
 export const Footer = () => {
     const navigate = useNavigate();
     return (
-        <footer className="bg-primary md:mt-0 mt-10">
+        <footer className="bg-surface md:mt-0 mt-10">
             <div className="max-w-7xl mx-auto gap-8 flex flex-col p-4">
                 <div className="flex flex-col md:flex-row justify-around gap-8">
                     <div className="flex flex-col items-start">

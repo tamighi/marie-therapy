@@ -9,7 +9,7 @@ export const Fieldset = ({ label, className = "" }: Props) => {
     return (
         <h2
             className={twMerge(
-                "font-bold border-b-secondary border-b-2 max-w-fit",
+                "font-bold border-b-primary border-b-2 max-w-fit",
                 className,
             )}
         >

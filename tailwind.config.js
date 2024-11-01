@@ -6,10 +6,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        // PRIMARY -> SURFACE, secondary -> primary
         "primary-bg": "#FDF5E6",
-        "primary": "#FAEBD7",
-        "secondary": "#75583B",
+        "surface": "#FAEBD7",
+        "primary": "#75583B",
         "primary-text": "#000000",
         "secondary-text": "#FFFFFF",
       },

@@ -8,7 +8,7 @@ export const AppBar = () => {
     const navigate = useNavigate();
 
     return (
-        <nav className="fixed z-10 h-16 w-screen bg-primary shadow-main">
+        <nav className="fixed z-10 h-16 w-screen bg-surface shadow-main">
             <div className="mx-auto max-w-7xl px-4">
                 <div className="flex h-16 justify-between">
                     <div className="flex items-center">

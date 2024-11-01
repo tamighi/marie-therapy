@@ -7,7 +7,7 @@ export const Card = ({ className = "", ...props }: Props) => {
     return (
         <div
             className={twMerge(
-                "p-4 rounded-md shadow-main bg-primary",
+                "p-4 rounded-md shadow-main bg-surface",
                 className,
             )}
             {...props}

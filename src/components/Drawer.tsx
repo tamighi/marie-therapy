@@ -13,7 +13,7 @@ export const Drawer = ({ open, onClose, children }: Props) => {
     return (
         <>
             <div
-                className={`top-0 bottom-0 left-0 fixed z-50 bg-primary py-2
+                className={`top-0 bottom-0 left-0 fixed z-50 bg-surface py-2
                     transition-transform duration-300
                     ${delayedClose ? "invisible" : ""}
                     ${open ? "" : "-translate-x-full"} `}
