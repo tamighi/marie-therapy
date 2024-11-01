@@ -21,7 +21,7 @@ export const ContactPage = () => {
                 ))}
             </div>
             <div className="flex flex-col items-center gap-8">
-                <Fieldset label="Contacts" className="mb-4" />
+                <Fieldset label="Contact" className="mb-4" />
 
                 <Card className="flex flex-col gap-4">
                     {contacts.map((contact, i) => (
