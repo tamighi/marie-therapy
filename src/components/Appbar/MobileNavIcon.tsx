@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
 import { menu_icon } from "../../assets";
-import { BaseButton } from "../Buttons";
 import { links } from "../../constants";
 import { Drawer } from "../Drawer";
+import { Button } from "../Buttons";
 
 export const MobileNavIcon = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,21 +16,22 @@ export const MobileNavIcon = () => {
 
     return (
         <div className="flex items-center md:hidden">
-            <BaseButton onClick={() => setIsOpen(true)}>
+            <Button variant="text" onClick={() => setIsOpen(true)}>
                 <img src={menu_icon} />
-            </BaseButton>
+            </Button>
             <Drawer open={isOpen} onClose={() => setIsOpen(false)}>
                 <div className="flex flex-col gap-4 px-2 items-center">
                     <div className="py-2">Menu</div>
                     <hr className="border-primary-text w-full" />
                     {links.map((item) => (
-                        <BaseButton
+                        <Button
+                            variant="text"
                             className="w-full"
                             key={item.to}
                             onClick={() => onNavClick(item.to)}
                         >
                             {item.label}
-                        </BaseButton>
+                        </Button>
                     ))}
                 </div>
             </Drawer>

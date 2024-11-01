@@ -6,11 +6,12 @@ export default {
   theme: {
     extend: {
       colors: {
+        // PRIMARY -> SURFACE, secondary -> primary
         "primary-bg": "#FDF5E6",
         "primary": "#FAEBD7",
-        "secondary": "#C1AF93",
+        "secondary": "#75583B",
         "primary-text": "#000000",
-        "emphasize-text": "#5C4530",
+        "secondary-text": "#FFFFFF",
       },
       spacing: {
         "8xl": "96rem"

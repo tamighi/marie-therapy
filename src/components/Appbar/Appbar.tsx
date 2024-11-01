@@ -1,8 +1,8 @@
 import { useNavigate } from "@tanstack/react-router";
 
 import { MobileNavIcon } from "./MobileNavIcon";
-import { BaseButton } from "../Buttons";
 import { links } from "../../constants";
+import { Button } from "../Buttons";
 
 export const AppBar = () => {
     const navigate = useNavigate();
@@ -12,23 +12,25 @@ export const AppBar = () => {
             <div className="mx-auto max-w-7xl px-4">
                 <div className="flex h-16 justify-between">
                     <div className="flex items-center">
-                        <BaseButton
+                        <Button
+                            variant="text"
                             onClick={() => navigate({ to: "/" })}
                             className="text-xl font-bold"
                         >
                             Marie Somville
-                        </BaseButton>
+                        </Button>
                     </div>
 
                     <div className="hidden items-center gap-4 md:flex">
                         {links.map((item) => (
-                            <BaseButton
+                            <Button
+                                variant="text"
                                 key={item.to}
                                 onClick={() => navigate({ to: item.to })}
                                 className="rounded-md p-3 text-base font-medium"
                             >
                                 {item.label}
-                            </BaseButton>
+                            </Button>
                         ))}
                     </div>
 

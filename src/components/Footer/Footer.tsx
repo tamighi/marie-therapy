@@ -1,6 +1,6 @@
 import { useNavigate } from "@tanstack/react-router";
 import { contacts, links } from "../../constants";
-import { BaseButton } from "../Buttons";
+import { Button } from "../Buttons";
 import { ContactItem } from "../ContactItem";
 
 export const Footer = () => {
@@ -11,15 +11,18 @@ export const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-around gap-8">
                     <div className="flex flex-col items-start">
                         <h3 className="font-bold mb-4 mx-2">Liens du site</h3>
-                        {links.map((link) => (
-                            <BaseButton
-                                key={link.label}
-                                onClick={() => navigate({ to: link.to })}
-                                className="py-1 px-2"
-                            >
-                                {link.label}
-                            </BaseButton>
-                        ))}
+                        <div className="flex flex-col items-start gap-2">
+                            {links.map((link) => (
+                                <Button
+                                    variant="outlined"
+                                    className="px-2 py-1"
+                                    key={link.label}
+                                    onClick={() => navigate({ to: link.to })}
+                                >
+                                    {link.label}
+                                </Button>
+                            ))}
+                        </div>
                     </div>
                     <div className="flex flex-col">
                         <h3 className="font-bold mb-4 px-2">

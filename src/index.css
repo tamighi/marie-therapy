@@ -27,5 +27,5 @@ span {
 
 a {
   text-decoration: underline;
-  color: theme('colors.emphasize-text');
+  color: theme('colors.secondary');
 }
