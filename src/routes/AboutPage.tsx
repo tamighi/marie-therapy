@@ -41,7 +41,8 @@ export const AboutPage = () => {
                         </div>
                         <LazyImage
                             src={tool.img}
-                            className="min-w-[360px] max-w-[360px] min-h-[380px]"
+                            className="md:min-w-[360px] max-w-[360px]
+                                md:min-h-[380px]"
                         />
                     </Card>
                 ))}
