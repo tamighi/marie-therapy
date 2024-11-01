@@ -1,6 +1,7 @@
 import { useNavigate } from "@tanstack/react-router";
 import { contacts, links } from "../../constants";
 import { BaseButton } from "../Buttons";
+import { ContactItem } from "../ContactItem";
 
 export const Footer = () => {
     const navigate = useNavigate();
@@ -26,24 +27,16 @@ export const Footer = () => {
                         <span className="font-semibold mb-4 px-2">
                             Informations de contact
                         </span>
-                        <span className="py-1 px-2">
-                            Phone:&nbsp;
-                            <a
-                                className="hover:underline"
-                                href={`tel:${contacts.phone}`}
-                            >
-                                {contacts.phone}
-                            </a>
-                        </span>
-                        <span className="py-1 px-2">
-                            Email:&nbsp;
-                            <a
-                                className="hover:underline"
-                                href={`mailto:${contacts.email}`}
-                            >
-                                {contacts.email}
-                            </a>
-                        </span>
+                        <div className="flex flex-col gap-2">
+                            {contacts.map((contact, i) => (
+                                <ContactItem
+                                    key={i}
+                                    withIcon={false}
+                                    className="px-2"
+                                    {...contact}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
 

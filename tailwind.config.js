@@ -9,7 +9,8 @@ export default {
         "primary-bg": "#FDF5E6",
         "primary": "#FAEBD7",
         "secondary": "#C1AF93",
-        "on-primary": "#000000",
+        "primary-text": "#000000",
+        "emphasize-text": "#5C4530",
       },
       spacing: {
         "8xl": "96rem"

@@ -24,3 +24,8 @@ p,
 span {
   font-size: 18px;
 }
+
+a {
+  text-decoration: underline;
+  color: theme('colors.emphasize-text');
+}
