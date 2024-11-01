@@ -25,7 +25,7 @@ export const HeroPage = () => {
                     En savoir plus
                 </Button>
             </div>
-            <LazyImage src={hero_image} className="flex-1 min-w-[600px]" />
+            <LazyImage src={hero_image} className="flex-1 md:min-w-[600px]" />
         </BasePage>
     );
 };
