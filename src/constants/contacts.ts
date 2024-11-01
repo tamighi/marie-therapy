@@ -15,7 +15,7 @@ export const contacts: Contact[] = [
         icon: mail_icon,
     },
     {
-        title: "Phone",
+        title: "Tel",
         href: "tel:(123) 456-7890",
         label: "(123) 456-7890",
         icon: phone_icon,
