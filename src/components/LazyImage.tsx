@@ -18,7 +18,7 @@ export const LazyImage = ({ src, className = "" }: Props) => {
             )}
         >
             <img
-                className={`${loaded ? "block" : "hidden"}`}
+                className={`rounded-md ${loaded ? "block" : "hidden"}`}
                 src={src}
                 onLoad={() => setLoaded(true)}
             />
