@@ -15,9 +15,9 @@ export const AboutPage = () => {
                     />
                 </Card>
                 <LazyImage
-                    className="min-w-96"
                     src={marie_portrait}
-                ></LazyImage>
+                    className="min-w-[360px] w-full"
+                />
             </div>
             <Fieldset label="Mes outils" className="md:mt-12" />
             <div className="flex flex-col items-center gap-8">
@@ -39,10 +39,7 @@ export const AboutPage = () => {
                                 }}
                             />
                         </div>
-                        <LazyImage
-                            src={tool.img}
-                            className="max-w-[90%] md:max-w-[25%]"
-                        ></LazyImage>
+                        <LazyImage src={tool.img} />
                     </Card>
                 ))}
             </div>
