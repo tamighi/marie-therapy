@@ -8,7 +8,7 @@ export const HeroPage = () => {
 
     return (
         <BasePage
-            className="flex h-full max-w-8xl items-center justify-center
+            className="flex h-full items-center justify-center
                 md:justify-between md:flex-row flex-col md:pb-[160px]"
         >
             <div
