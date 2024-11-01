@@ -20,13 +20,13 @@ export const MobileNavIcon = () => {
                 <MenuIcon />
             </Button>
             <Drawer open={isOpen} onClose={() => setIsOpen(false)}>
-                <div className="flex flex-col gap-4 px-2 items-center">
-                    <div className="py-2">Menu</div>
+                <div className="flex flex-col gap-4 px-2">
+                    <div className="py-2 px-4">Menu</div>
                     <hr className="border-primary-text w-full" />
                     {links.map((item) => (
                         <Button
                             variant="text"
-                            className="w-full"
+                            className="w-full text-left"
                             key={item.to}
                             onClick={() => onNavClick(item.to)}
                         >
