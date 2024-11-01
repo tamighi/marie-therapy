@@ -10,13 +10,14 @@ export const OfficeCard = ({
     website,
     address,
     title,
+    schedule,
     imagePosition = "right",
 }: Props) => {
     const flexDirection = imagePosition === "right" ? "row" : "row-reverse";
     return (
         <Card
             className={`flex md:flex-${flexDirection} flex-col md:items-start
-                items-center gap-8`}
+                items-center gap-8 w-full justify-end`}
         >
             <div className="flex flex-col gap-8">
                 <h3 className="font-bold">{title}</h3>
@@ -24,6 +25,10 @@ export const OfficeCard = ({
                     <span>
                         <span className="font-bold">Addresse</span>:&nbsp;
                         {address}
+                    </span>
+                    <span>
+                        <span className="font-bold">Horaires</span>:&nbsp;
+                        {schedule}
                     </span>
                     <span>
                         <span className="font-bold">Site web</span>:&nbsp;
