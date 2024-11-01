@@ -21,16 +21,18 @@ export const ContactItem = ({
                     <a
                         href={href}
                         target="_blank"
-                        className="flex gap-2 shadow-icon bg-surface p-2
-                            rounded-xl"
+                        className="flex gap-2 self-start shadow-icon bg-surface
+                            p-2 rounded-xl"
                     >
-                        <img src={icon} />
+                        <img src={icon} className="min-w-6 min-h-6" />
                     </a>
                 )}
-                <span className="font-bold">{title}:</span>
-                <a href={href} target="_blank">
-                    {label}
-                </a>
+                <span className="break-all">
+                    <span className="font-bold">{title}:&nbsp;</span>
+                    <a href={href} target="_blank">
+                        {label}
+                    </a>
+                </span>
             </span>
         </div>
     );

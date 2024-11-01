@@ -7,7 +7,7 @@ import { OfficeCard } from "./OfficeCard";
 export const ContactPage = () => {
     return (
         <BasePage
-            className="flex md:flex-row flex-col-reverse gap-16 items-center
+            className="flex md:flex-row flex-col-reverse gap-16 items-start
                 justify-between"
         >
             <div className="flex flex-col items-center gap-8">
@@ -20,14 +20,15 @@ export const ContactPage = () => {
                     />
                 ))}
             </div>
-            <Card className="flex flex-col gap-8">
-                <h3 className="font-bold underline">Contacts</h3>
-                <div className="flex flex-col gap-4">
+            <div className="flex flex-col items-center gap-8">
+                <Fieldset label="Contacts" className="mb-4" />
+
+                <Card className="flex flex-col gap-4">
                     {contacts.map((contact, i) => (
                         <ContactItem key={i} {...contact} />
                     ))}
-                </div>
-            </Card>
+                </Card>
+            </div>
         </BasePage>
     );
 };
