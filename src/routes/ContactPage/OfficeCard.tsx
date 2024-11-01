@@ -15,7 +15,7 @@ export const OfficeCard = ({ img, website, address, title }: Props) => {
                     </span>
                 </div>
             </div>
-            <LazyImage src={img} />
+            <LazyImage src={img} className="w-[248px] h-[174px]" />
         </Card>
     );
 };

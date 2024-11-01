@@ -13,7 +13,7 @@ export const LazyImage = ({ src, className = "" }: Props) => {
     return (
         <div
             className={twMerge(
-                "h-full w-full flex items-center justify-center",
+                "h-auto w-auto flex justify-center items-center",
                 className,
             )}
         >
