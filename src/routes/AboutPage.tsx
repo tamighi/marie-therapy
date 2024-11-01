@@ -9,10 +9,7 @@ export const AboutPage = () => {
             <div className="flex md:flex-row flex-col-reverse items-center gap-8">
                 <Card className="flex flex-col gap-8">
                     <h2 className="font-bold">Qui suis-je ?</h2>
-                    <p
-                        className="text-justify"
-                        dangerouslySetInnerHTML={{ __html: AboutText }}
-                    />
+                    <p dangerouslySetInnerHTML={{ __html: AboutText }} />
                 </Card>
                 <LazyImage
                     src={marie_portrait}
@@ -34,7 +31,6 @@ export const AboutPage = () => {
                                 {tool.title}
                             </h2>
                             <p
-                                className="text-justify"
                                 dangerouslySetInnerHTML={{
                                     __html: tool.description,
                                 }}
