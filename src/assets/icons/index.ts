@@ -1,4 +1,4 @@
-export { default as menu_icon } from "./menu.svg";
+export { default as MenuIcon } from "./menu.svg?react";
 export { default as home_icon } from "./home.svg";
 export { default as map_pin_icon } from "./map-pin.svg";
 export { default as monitor_icon } from "./monitor.svg";
