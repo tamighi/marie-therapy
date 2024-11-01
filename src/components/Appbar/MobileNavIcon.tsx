@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
-import { menuIcon } from "../../assets";
+import { menu_icon } from "../../assets";
 import { BaseButton } from "../Buttons";
 import { links } from "../../constants";
 import { Drawer } from "../Drawer";
@@ -17,7 +17,7 @@ export const MobileNavIcon = () => {
     return (
         <div className="flex items-center md:hidden">
             <BaseButton onClick={() => setIsOpen(true)}>
-                <img src={menuIcon} />
+                <img src={menu_icon} />
             </BaseButton>
             <Drawer open={isOpen} onClose={() => setIsOpen(false)}>
                 <div className="flex flex-col gap-4 px-2 items-center">

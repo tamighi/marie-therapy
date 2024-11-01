@@ -4,3 +4,4 @@ export * from "./about";
 export * from "./tools";
 export * from "./modalities";
 export * from "./informations";
+export * from "./offices";
