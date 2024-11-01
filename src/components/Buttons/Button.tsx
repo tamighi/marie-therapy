@@ -5,13 +5,16 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
     variant?: "outlined" | "contained" | "text";
 };
 
-const baseStyleClass =
-    "rounded-lg px-4 py-2 transition-colors hover:bg-[#00000022]";
+const baseStyleClasses =
+    "rounded-lg px-4 py-2 transition-colors text-primary hover:bg-opacity-20 hover:bg-primary";
 
 const styleClasses: { [K in Props["variant"] as string]: string } = {
-    outlined: `${baseStyleClass} border-primary text-primary border-2`,
-    contained: `${baseStyleClass} bg-primary text-secondary-text hover:bg-opacity-70 hover:bg-primary`,
-    text: `${baseStyleClass} text-primary`,
+    outlined: twMerge(baseStyleClasses, "border-primary border-2"),
+    contained: twMerge(
+        baseStyleClasses,
+        "bg-primary text-secondary-text hover:bg-opacity-70",
+    ),
+    text: baseStyleClasses,
 };
 
 export const Button = ({
