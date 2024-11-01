@@ -10,7 +10,7 @@ export const Footer = () => {
             <div className="max-w-7xl mx-auto gap-8 flex flex-col p-4">
                 <div className="flex flex-col md:flex-row justify-around gap-8">
                     <div className="flex flex-col items-start">
-                        <h3 className="font-bold mb-4 mx-2">Liens du site</h3>
+                        <h3 className="font-bold mb-4">Liens du site</h3>
                         <div className="flex flex-col items-start gap-2">
                             {links.map((link) => (
                                 <Button
