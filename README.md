@@ -4,7 +4,7 @@ React / typescript website.
 
 ## Librairies
 
-Routing: tanstack 
+Routing: tanstack  
 UI: tailwind
 
 ## Design
