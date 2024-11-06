@@ -24,7 +24,7 @@ export const AboutPage = () => {
                         key={i}
                         className={`flex flex-col
                         ${i % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"}
-                        gap-16 items-center`}
+                        gap-16 md:items-start`}
                     >
                         <div className="flex flex-col gap-8">
                             <h2 className={"font-bold text-center"}>
@@ -39,7 +39,7 @@ export const AboutPage = () => {
                         <LazyImage
                             src={tool.img}
                             className="md:min-w-[360px] max-w-[360px]
-                                md:min-h-[380px]"
+                                min-h-[380px]"
                         />
                     </Card>
                 ))}
