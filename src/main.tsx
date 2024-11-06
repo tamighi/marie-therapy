@@ -9,10 +9,19 @@ import {
 
 import "./index.css";
 
-import { AboutPage, ContactPage, HeroPage, ModalitiesPage } from "./routes";
+import {
+    AboutPage,
+    ContactPage,
+    HeroPage,
+    ModalitiesPage,
+    NotFoundPage,
+} from "./routes";
 import { Root } from "./routes/Root.tsx";
 
-const routeRoute = createRootRoute({ component: Root });
+const routeRoute = createRootRoute({
+    component: Root,
+    notFoundComponent: NotFoundPage,
+});
 
 const heroRoute = createRoute({
     path: "/",

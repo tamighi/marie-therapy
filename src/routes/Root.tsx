@@ -15,7 +15,7 @@ export const Root = () => {
             <div className="min-h-screen flex flex-col">
                 <div className="flex flex-1 px-4 py-4 md:py-0 mt-16">
                     <AnimatePresence mode="wait">
-                        <AnimatedOutlet key={nextMatch.id} />
+                        <AnimatedOutlet key={nextMatch?.id} />
                     </AnimatePresence>
                 </div>
             </div>
