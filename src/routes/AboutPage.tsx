@@ -1,3 +1,4 @@
+import { cloneElement } from "react";
 import { marie_portrait } from "../assets";
 import { Card, Fieldset, LazyImage } from "../components";
 import { AboutText, tools } from "../constants";
@@ -36,11 +37,10 @@ export const AboutPage = () => {
                                 }}
                             />
                         </div>
-                        <LazyImage
-                            src={tool.img}
-                            className="md:min-w-[360px] max-w-[360px]
-                                min-h-[380px]"
-                        />
+                        {cloneElement(tool.img, {
+                            className:
+                                "max-h-[360px] max-w-[360px] min-w-[360px]",
+                        })}
                     </Card>
                 ))}
             </div>

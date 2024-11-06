@@ -1,5 +1,4 @@
-import { not_found_image } from "../assets";
-import { LazyImage } from "../components";
+import { NotFoundImage } from "../assets";
 import { BasePage } from "./BasePage";
 
 export const NotFoundPage = () => {
@@ -9,7 +8,7 @@ export const NotFoundPage = () => {
                 className="flex gap-32 flex-col w-full items-center
                     justify-center mt-32"
             >
-                <LazyImage className="w-80" src={not_found_image} />
+                <NotFoundImage className="h-80" />
                 <h3 className="italic">Il n'y a rien ici ...</h3>
             </div>
         </BasePage>

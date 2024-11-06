@@ -1,7 +1,7 @@
 import { useNavigate } from "@tanstack/react-router";
-import { hero_image } from "../assets";
-import { Button, LazyImage } from "../components";
+import { Button } from "../components";
 import { BasePage } from "./BasePage";
+import { HeroImage } from "../assets";
 
 export const HeroPage = () => {
     const navigate = useNavigate();
@@ -25,7 +25,7 @@ export const HeroPage = () => {
                     En savoir plus
                 </Button>
             </div>
-            <LazyImage src={hero_image} className="flex-1 md:min-w-[600px]" />
+            <HeroImage className="flex-1 md:min-w-[600px]" />
         </BasePage>
     );
 };
