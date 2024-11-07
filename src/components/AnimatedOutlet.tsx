@@ -28,7 +28,11 @@ export const AnimatedOutlet = forwardRef<HTMLDivElement>((_, ref) => {
             initial="initial"
             animate="animate"
             exit="exit"
-            onAnimationComplete={() => window.scrollTo({ top: 0 })}
+            onAnimationComplete={(e) => {
+                if (e === "exit") {
+                    window.scrollTo({ top: 0 });
+                }
+            }}
             transition={{ duration: 0.3 }}
             ref={ref}
             className="w-full"
