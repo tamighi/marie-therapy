@@ -38,8 +38,7 @@ export const AboutPage = () => {
                             />
                         </div>
                         {cloneElement(tool.img, {
-                            className:
-                                "max-h-[360px] max-w-[360px] min-w-[360px]",
+                            className: "max-h-[340px] max-w-full min-w-[360px]",
                         })}
                     </Card>
                 ))}

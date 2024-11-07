@@ -25,7 +25,7 @@ export const HeroPage = () => {
                     En savoir plus
                 </Button>
             </div>
-            <HeroImage className="flex-1 md:min-w-[600px]" />
+            <HeroImage className="flex-1 md:min-w-[600px] max-w-full" />
         </BasePage>
     );
 };
