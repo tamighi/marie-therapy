@@ -7,8 +7,8 @@ import { OfficeCard } from "./OfficeCard";
 export const ContactPage = () => {
     return (
         <BasePage
-            className="flex md:flex-row flex-col-reverse gap-16 items-start
-                justify-between"
+            className="flex md:flex-row flex-col-reverse gap-16 md:items-start
+                items-center justify-between"
         >
             <div className="flex flex-col items-center gap-8">
                 <Fieldset label="Mes cabinets" className="mb-4" />
