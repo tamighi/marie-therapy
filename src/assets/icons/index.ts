@@ -5,3 +5,4 @@ export { default as monitor_icon } from "./monitor.svg";
 export { default as phone_icon } from "./phone.svg";
 export { default as mail_icon } from "./mail.svg";
 export { default as linkedin_icon } from "./linkedin.svg";
+export { default as CloseIcon } from "./close_icon.svg?react";
