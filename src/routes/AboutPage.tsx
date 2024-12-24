@@ -7,9 +7,11 @@ import { BasePage } from "./BasePage";
 export const AboutPage = () => {
     return (
         <BasePage className="flex h-full flex-col gap-16 items-center">
-            <div className="flex md:flex-row flex-col-reverse items-center gap-8">
+            <div
+                className="flex md:flex-row flex-col-reverse items-center gap-8"
+            >
                 <Card className="flex flex-col gap-8">
-                    <h2 className="font-bold">Qui suis-je ?</h2>
+                    <h2 className="font-bold text-center">Qui suis-je ?</h2>
                     <p dangerouslySetInnerHTML={{ __html: AboutText }} />
                 </Card>
                 <LazyImage
