@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "@tanstack/react-router";
+import { useLocation, useNavigate } from "@tanstack/react-router";
 import { links } from "../../constants";
 import { Drawer } from "../Drawer";
 import { Button } from "../Buttons";
@@ -8,6 +8,7 @@ import { MenuIcon } from "../../assets";
 export const MobileNavIcon = () => {
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
+    const { pathname } = useLocation();
 
     const onNavClick = (to: string) => {
         setIsOpen(false);
@@ -26,7 +27,12 @@ export const MobileNavIcon = () => {
                     {links.map((item) => (
                         <Button
                             variant="text"
-                            className="w-full text-left"
+                            className={
+                                "w-full text-left " +
+                                (pathname === import.meta.env.BASE_URL + item.to
+                                    ? "font-bold"
+                                    : "")
+                            }
                             key={item.to}
                             onClick={() => onNavClick(item.to)}
                         >

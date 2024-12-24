@@ -1,11 +1,12 @@
-import { useNavigate } from "@tanstack/react-router";
+import { useLocation, useNavigate } from "@tanstack/react-router";
 
-import { MobileNavIcon } from "./MobileNavIcon";
 import { links } from "../../constants";
 import { Button } from "../Buttons";
+import { MobileNavIcon } from "./MobileNavIcon";
 
 export const AppBar = () => {
     const navigate = useNavigate();
+    const { pathname } = useLocation();
 
     return (
         <nav className="fixed z-10 h-16 w-screen bg-surface shadow-main">
@@ -27,7 +28,13 @@ export const AppBar = () => {
                                 variant="text"
                                 key={item.to}
                                 onClick={() => navigate({ to: item.to })}
-                                className="rounded-md p-3 text-base font-medium"
+                                className={
+                                    "rounded-md p-3 text-base " +
+                                    (pathname ===
+                                    import.meta.env.BASE_URL + item.to
+                                        ? "font-bold"
+                                        : "font-medium")
+                                }
                             >
                                 {item.label}
                             </Button>
