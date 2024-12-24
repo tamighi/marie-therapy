@@ -17,6 +17,7 @@ import {
     NotFoundPage,
 } from "./routes";
 import { Root } from "./routes/Root.tsx";
+import { cabinet_image, marie_portrait } from "./assets/index.ts";
 
 const routeRoute = createRootRoute({
     component: Root,
@@ -64,3 +65,6 @@ createRoot(document.getElementById("root")!).render(
         <RouterProvider router={router} />
     </StrictMode>,
 );
+
+const imagesToPreload = [marie_portrait, cabinet_image];
+imagesToPreload.forEach((image) => (new Image().src = image));
