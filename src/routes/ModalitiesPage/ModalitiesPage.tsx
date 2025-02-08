@@ -1,10 +1,13 @@
-import { Fieldset } from "../../components";
+import { useNavigate } from "@tanstack/react-router";
+import { Button, Fieldset } from "../../components";
 import { informations, modalities } from "../../constants";
 import { BasePage } from "../BasePage";
 import { InformationCard } from "./InformationCard";
 import { ModalityCard } from "./ModalityCard";
 
 export const ModalitiesPage = () => {
+    const navigate = useNavigate();
+
     return (
         <BasePage className="flex flex-col gap-16 items-center">
             <Fieldset label="Modalités" />
@@ -21,6 +24,9 @@ export const ModalitiesPage = () => {
                     <InformationCard key={information.title} {...information} />
                 ))}
             </div>
+            <Button onClick={() => navigate({ to: "/contact" })}>
+                Me contacter
+            </Button>
         </BasePage>
     );
 };

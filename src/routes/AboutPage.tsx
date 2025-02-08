@@ -1,10 +1,13 @@
+import { useNavigate } from "@tanstack/react-router";
 import { cloneElement } from "react";
 import { marie_portrait } from "../assets";
-import { Card, Fieldset, LazyImage } from "../components";
+import { Button, Card, Fieldset, LazyImage } from "../components";
 import { AboutText, tools } from "../constants";
 import { BasePage } from "./BasePage";
 
 export const AboutPage = () => {
+    const navigate = useNavigate();
+
     return (
         <BasePage className="flex h-full flex-col gap-16 items-center">
             <div
@@ -45,6 +48,15 @@ export const AboutPage = () => {
                         })}
                     </Card>
                 ))}
+            </div>
+
+            <div className="flex gap-8">
+                <Button onClick={() => navigate({ to: "/modalities" })}>
+                    Plus d'informations
+                </Button>
+                <Button onClick={() => navigate({ to: "/contact" })}>
+                    Me contacter
+                </Button>
             </div>
         </BasePage>
     );
