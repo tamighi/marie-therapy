@@ -5,6 +5,6 @@ export type Link = {
 
 export const links: Link[] = [
     { label: "A propos", to: "/about" },
-    { label: "Prix et modalités", to: "/modalities" },
-    { label: "Contact et cabinets", to: "/contact" },
+    { label: "Infos pratiques", to: "/modalities" },
+    { label: "Contact", to: "/contact" },
 ] as const;
